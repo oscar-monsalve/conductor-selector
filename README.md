@@ -24,10 +24,41 @@ The following (in Spanish) are the most used sources of information from both RE
 previous regulation/standard may also be given for completeness:
 
 - Aplicación de normas tecnicas:
-    - Título 24, pág 133, RETIE 2024 libro 3.
+    - Título 24, pág. 133, RETIE 2024 libro 3.
 
 - Temperatura de diseño:
     - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3.
     - Artículo 110-14 (C), pág. 36, NTC 2050 segunda actualización.
     - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
 
+- Protecciones termomagnéticas normalizadas:
+    - Tabla 240.6(A), pág. 109, NTC 2050 segunda actualización.
+    - Sección 240-6 (a), pág. 92, NTC 2050 primera actualización.
+
+- La protección termomagnética (PTM) mínima en un tablero de distribución eléctrica es de 20 A para pequeños artefactos (no aplica alumbrado):
+    - Artículo 210.11 (C)(1), pág. 59, NTC 2050 segunda actualización.
+    - Artículo 220-4 (b), pág. 64, NTC 2050 primera actualización.
+
+- Calibre de conductor aislado para temperatura ambiente de 30 °C:
+    - Tabla 310.15(B)(16) , pág. 191, NTC 2050 segunda actualización.
+    - Tabla 310-16, pág. 154, NTC 2050 primera actualización.
+
+- Calibre de conductor al aire libre para temperatura ambiente de 30 °C:
+    - f
+
+- Protección máxima contra sobrecorriente:
+    - pág. 107, NTC 2050 segunda actualización.
+
+- Calibre del conductor de neutro:
+    - Sección 220-22, pág. 67 NTC 2050 primera actualización. El calibre del conductor del neutro debe ser igual al de la fase.
+
+
+- Calibre del conductor de puesta a tierra:
+    - Tabla , pág., NTC 2050 segunda actualización.
+    - Tabla , pág. , NTC 2050 primera actualización.
+
+
+- Conductores en paralelo. Se permiten conductores en paralelo a partir de 195 A de corriente, es decir, para un calibre
+  mayor o igual a 1/0 AWG:
+    - Artículo 310.10 (H)(1) , pág. 185, NTC 2050 segunda actualización.
+    - Sección 310-4 , pág. 143, NTC 2050 primera actualización.
