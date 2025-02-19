@@ -52,11 +52,17 @@ previous regulation/standard may also be given for completeness:
 - Calibre del conductor de neutro:
     - Sección 220-22, pág. 67 NTC 2050 primera actualización. El calibre del conductor del neutro debe ser igual al de la fase.
 
-
 - Calibre del conductor de puesta a tierra:
     - Tabla , pág., NTC 2050 segunda actualización.
     - Tabla , pág. , NTC 2050 primera actualización.
 
+- Acometida aérea según Título 26 (d), pág. 134, libro 3, RETIE 2024:
+    - Cobre: calibre no menor a 8 AWG.
+    - Aluminio: calibre no menor a 6 AWG.
+
+- Acometida subterránea según Artículo 230.31 (B), pág. 96, NTC 2050 segunda actualización:
+    - Cobre: calibre no menor a 8 AWG.
+    - Aluminio: calibre no menor a 6 AWG.
 
 - Conductores en paralelo. Se permiten conductores en paralelo a partir de 195 A de corriente, es decir, para un calibre
   mayor o igual a 1/0 AWG:
