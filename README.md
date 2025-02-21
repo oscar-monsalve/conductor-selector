@@ -31,6 +31,8 @@ previous regulation/standard may also be given for completeness:
     - Artículo 110-14 (C), pág. 36, NTC 2050 segunda actualización.
     - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
 
+### Protecciones termomagnéticas (PTM)
+
 - Protecciones termomagnéticas normalizadas:
     - Tabla 240.6(A), pág. 109, NTC 2050 segunda actualización.
     - Sección 240-6 (a), pág. 92, NTC 2050 primera actualización.
@@ -39,22 +41,56 @@ previous regulation/standard may also be given for completeness:
     - Artículo 210.11 (C)(1), pág. 59, NTC 2050 segunda actualización.
     - Artículo 220-4 (b), pág. 64, NTC 2050 primera actualización.
 
+- Protección máxima contra sobrecorriente:
+    - Artículo 240.4(D)(1) hasta (7), pág. 107, NTC 2050 segunda actualización.
+
+### Capacidad de corriente de conductores
+
 - Calibre de conductor aislado para temperatura ambiente de 30 °C:
-    - Tabla 310.15(B)(16) , pág. 191, NTC 2050 segunda actualización.
+    - Tabla 310.15(B)(16), pág. 191, NTC 2050 segunda actualización.
     - Tabla 310-16, pág. 154, NTC 2050 primera actualización.
 
 - Calibre de conductor al aire libre para temperatura ambiente de 30 °C:
-    - f
-
-- Protección máxima contra sobrecorriente:
-    - pág. 107, NTC 2050 segunda actualización.
+    - falta encontrar equivalente en 2da actualización de NTC2050.
 
 - Calibre del conductor de neutro:
+    - Artículo 220.61(A), pág. 80, NTC 2050 segunda actualización.
     - Sección 220-22, pág. 67 NTC 2050 primera actualización. El calibre del conductor del neutro debe ser igual al de la fase.
 
 - Calibre del conductor de puesta a tierra:
-    - Tabla , pág., NTC 2050 segunda actualización.
-    - Tabla , pág. , NTC 2050 primera actualización.
+    - Tabla 250.122, pág. 154, NTC 2050 segunda actualización.
+    - Tabla 250-95, pág. 123, NTC 2050 primera actualización.
+    - Nota: Si el calibre del conductor de tierra resulta de 3 AWG, seleccionar el calibre mayor, es decir, 2 AWG.
+
+- Propidades de los conductores (cálculo de caída de tensión):
+    - Tabla 8, pág. 962, NTC 2050 segunda actualización.
+    - Tabla 8, pág. 728, NTC 2050 primera actualización.
+
+- Calibre de conductor según tensión nominal:
+    - Tabla 310.106(A), pág. 211, NTC 2050 segunda actualización.
+
+- Conductores en paralelo. Se permiten conductores en paralelo a partir de 195 A de corriente, es decir, para un calibre
+  mayor o igual a 1/0 AWG:
+    - Artículo 310.10 (H)(1), pág. 185, NTC 2050 segunda actualización.
+    - Sección 310-4, pág. 143, NTC 2050 primera actualización.
+
+- Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
+    - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
+
+### Cargas
+
+- Cargas unitarias (VA/m^2) de iluminación general por tipo de área:
+    - Tabla 220.12, pág. 75, NTC 2050 segunda actualización.
+    - 33 VA/m^2 de carga unitaria para Unidades de vivienda.
+
+- Factores de demanda de cargas de iluminación (alumbrado general):
+    - Tabla 220.42, pág. 77, NTC 2050 segunda actualización.
+
+- Cargas de pequeños artefactos y lavandería en unidades de vivienda:
+    - Artículo 220.52, pág. 78, NTC 2050 segunda actualización.
+
+
+### Acometidas
 
 - Acometida aérea según Título 26 (d), pág. 134, libro 3, RETIE 2024:
     - Cobre: calibre no menor a 8 AWG.
@@ -64,7 +100,3 @@ previous regulation/standard may also be given for completeness:
     - Cobre: calibre no menor a 8 AWG.
     - Aluminio: calibre no menor a 6 AWG.
 
-- Conductores en paralelo. Se permiten conductores en paralelo a partir de 195 A de corriente, es decir, para un calibre
-  mayor o igual a 1/0 AWG:
-    - Artículo 310.10 (H)(1) , pág. 185, NTC 2050 segunda actualización.
-    - Sección 310-4 , pág. 143, NTC 2050 primera actualización.
