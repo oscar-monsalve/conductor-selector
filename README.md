@@ -23,6 +23,8 @@ Normas Técnicas y Certificación (ICONTEC). This is a copyrighted document.
 The following (in Spanish) are the most used sources of information from both RETIE and NTC 2050. Some references to
 previous regulation/standard may also be given for completeness:
 
+### Información general
+
 - Aplicación de normas tecnicas:
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
