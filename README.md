@@ -48,12 +48,11 @@ previous regulation/standard may also be given for completeness:
 
 ### Capacidad de corriente de conductores
 
-- Calibre de conductor aislado para temperatura ambiente de 30 °C:
+- Calibre de conductor aislado para temperatura ambiente de 30 °C (también para conductores al aire libre):
     - Tabla 310.15(B)(16), pág. 191, NTC 2050 segunda actualización.
     - Tabla 310-16, pág. 154, NTC 2050 primera actualización.
-
-- Calibre de conductor al aire libre para temperatura ambiente de 30 °C:
-    - falta encontrar equivalente en 2da actualización de NTC2050.
+    - Nota: la Tabla 310-17, pág. 155, de la NTC 2050 primera actualización ya no existe en la segunda actualización.
+      Por tanto, para casos de conductores al aire libre, se utiliza la Tabla 310.15(B)(16), pág. 191, NTC 2050 segunda actualización.
 
 - Calibre del conductor de neutro:
     - Artículo 220.61(A), pág. 80, NTC 2050 segunda actualización.
