@@ -44,7 +44,7 @@ previous regulation/standard may also be given for completeness:
     - Artículo 220-4 (b), pág. 64, NTC 2050 primera actualización.
 
 - Protección máxima contra sobrecorriente:
-    - Artículo 240.4(D)(1) hasta (7), pág. 107, NTC 2050 segunda actualización.
+    - Artículo 240.4(D)(1)-(7), pág. 107, NTC 2050 segunda actualización.
 
 ### Capacidad de corriente de conductores
 
@@ -63,10 +63,6 @@ previous regulation/standard may also be given for completeness:
     - Tabla 250-95, pág. 123, NTC 2050 primera actualización.
     - Nota: Si el calibre del conductor de tierra resulta de 3 AWG, seleccionar el calibre mayor, es decir, 2 AWG.
 
-- Propidades de los conductores (cálculo de caída de tensión):
-    - Tabla 8, pág. 962, NTC 2050 segunda actualización.
-    - Tabla 8, pág. 728, NTC 2050 primera actualización.
-
 - Calibre de conductor según tensión nominal:
     - Tabla 310.106(A), pág. 211, NTC 2050 segunda actualización.
 
@@ -74,6 +70,10 @@ previous regulation/standard may also be given for completeness:
   mayor o igual a 1/0 AWG:
     - Artículo 310.10 (H)(1), pág. 185, NTC 2050 segunda actualización.
     - Sección 310-4, pág. 143, NTC 2050 primera actualización.
+
+- Propidades de los conductores (cálculo de caída de tensión):
+    - Tabla 8, pág. 962, NTC 2050 segunda actualización.
+    - Tabla 8, pág. 728, NTC 2050 primera actualización.
 
 - Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
     - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
@@ -101,7 +101,7 @@ previous regulation/standard may also be given for completeness:
     - Artículo 220.52, pág. 78, NTC 2050 segunda actualización.
 
 
-### Acometidas
+### Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización)
 
 - Acometida aérea según Título 26 (d), pág. 134, libro 3, RETIE 2024:
     - Cobre: calibre no menor a 8 AWG.
