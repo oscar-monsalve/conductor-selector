@@ -79,6 +79,16 @@ previous regulation/standard may also be given for completeness:
 - Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
     - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
 
+### Canalizaciones
+
+- Dimensiones de conductores aislados (tener en cuenta la cantidad de conductores totales):
+    - Tabla 5, pág. 957, NTC 2050 segunda actualización.
+    - Tabla 5, pág. 723, NTC 2050 primera actualización.
+
+- Sección transversal de tubo (conduit):
+    - Tabla 4, pág. 954, NTC 2050 segunda actualización.
+    - Tabla 4, pág. 720, NTC 2050 primera actualización.
+
 ### Cargas
 
 - Cargas unitarias (VA/m^2) de iluminación general por tipo de área:
