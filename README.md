@@ -28,6 +28,10 @@ previous regulation/standard may also be given for completeness:
 - Aplicación de normas tecnicas:
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
+- Caída de tensión permitida:
+    - Título 26 (f), pág. 135, RETIE 2024 libro 3. $$\le 3%$$ para acometidas y $$\le 5%$$ en alimentadores y circuitos
+      ramales (aguas arriba del transformador de distribución).
+
 - Temperatura de diseño:
     - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3. (Esta refiere a la NTC 2050, segunda actualización).
     - 60°C para 100 A nominales o menos, o conductores de 14 AWG a 1 AWG según Artículo 110-14 (C)(1)(a)(1), pág. 37, NTC 2050 segunda actualización.
