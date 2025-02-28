@@ -30,7 +30,8 @@ previous regulation/standard may also be given for completeness:
 
 - Temperatura de diseño:
     - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3. (Esta refiere a la NTC 2050, segunda actualización).
-    - Artículo 110-14 (C)(1), pág. 36 y 37, NTC 2050 segunda actualización.
+    - 60°C para 100 A nominales o menos, o conductores de 14 AWG a 1 AWG según Artículo 110-14 (C)(1)(a)(1), pág. 37, NTC 2050 segunda actualización.
+    - 75°C para 100 A nominales o mayores, o conductores con calibre mayor a 1 AWG según Artículo 110-14 (C)(1)(b)(1), pág. 37, NTC 2050 segunda actualización.
     - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
 
 ### Protecciones termomagnéticas (PTM)
