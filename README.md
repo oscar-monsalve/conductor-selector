@@ -72,7 +72,7 @@ previous regulation/standard may also be given for completeness:
     - Artículo 310.10 (H)(1), pág. 185, NTC 2050 segunda actualización.
     - Sección 310-4, pág. 143, NTC 2050 primera actualización.
 
-- Propidades de los conductores (cálculo de caída de tensión):
+- Propiedades de los conductores (cálculo de caída de tensión):
     - Tabla 8, pág. 962, NTC 2050 segunda actualización.
     - Tabla 8, pág. 728, NTC 2050 primera actualización.
 
