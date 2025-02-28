@@ -29,7 +29,7 @@ previous regulation/standard may also be given for completeness:
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
 - Caída de tensión permitida:
-    - Título 26 (f), pág. 135, RETIE 2024 libro 3. $$\le 3\\%$$ para acometidas y $$\le %\\5%$$ en alimentadores y circuitos
+    - Título 26 (f), pág. 135, RETIE 2024 libro 3. $$\le3\\%$$ para acometidas y $$\le5\\%$$ en alimentadores y circuitos
       ramales (aguas arriba del transformador de distribución).
 
 - Temperatura de diseño:
