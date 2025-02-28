@@ -29,8 +29,8 @@ previous regulation/standard may also be given for completeness:
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
 - Temperatura de diseño:
-    - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3.
-    - Artículo 110-14 (C), pág. 36, NTC 2050 segunda actualización.
+    - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3. (Esta refiere a la NTC 2050, segunda actualización).
+    - Artículo 110-14 (C)(1), pág. 36 y 37, NTC 2050 segunda actualización.
     - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
 
 ### Protecciones termomagnéticas (PTM)
