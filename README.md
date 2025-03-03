@@ -71,8 +71,9 @@ previous regulation/standard may also be given for completeness:
 - Calibre de conductor según tensión nominal:
     - Tabla 310.106(A), pág. 211, NTC 2050 segunda actualización.
 
-- Conductores en paralelo. Se permiten conductores en paralelo a partir de 195 A de corriente, es decir, para un calibre
-  mayor o igual a 1/0 AWG:
+- Conductores en paralelo. Se permiten conductores en paralelo para un calibre mayor o igual a 1/0 AWG. Para efectos
+  del curso de Instalaciones Eléctricas Industriales, se pueden utilizar conductores en paralelo para una corriente
+  mayor a 195 A. Lo anterior debido a que se considera sólo un rango de calibres entre 1/0 AWG y 4/0 AWG:
     - Artículo 310.10 (H)(1), pág. 185, NTC 2050 segunda actualización.
     - Sección 310-4, pág. 143, NTC 2050 primera actualización.
 
@@ -93,18 +94,46 @@ previous regulation/standard may also be given for completeness:
     - Tabla 4, pág. 954, NTC 2050 segunda actualización.
     - Tabla 4, pág. 720, NTC 2050 primera actualización.
 
-### Cargas
+### Factores de demanda
 
-- Cargas unitarias (VA/m^2) de iluminación general por tipo de área:
+- Cargas de iluminación general por tipo de área:
     - Tabla 220.12, pág. 75, NTC 2050 segunda actualización.
-    - 33 VA/m^2 de carga unitaria para Unidades de vivienda.
+
+- Otras cargas para todo tipo de áreas:
+    - Artículo 220.14, pág. 75, NTC 2050 segunda actualización.
 
 - Factores de demanda de cargas de iluminación (alumbrado general):
     - Tabla 220.42, pág. 77, NTC 2050 segunda actualización.
 
+- Alumbrado de vitrinas y riel de iluminación:
+    - Artículo 220.43, pág. 77, NTC 2050 segunda actualización.
+
+- Cargas de tomacorrientes en unidades diferentes a las de vivienda:
+    - Artículo 220.44 y Tabla 220.44, pág. 77, NTC 2050 segunda actualización.
+
+- Motores:
+    - Artículo 220.50, pág. 77, NTC 2050 segunda actualización.
+
+- Calefacción eléctrica fija de ambiente:
+    - Artículo 220.51, pág. 77, NTC 2050 segunda actualización.
+
 - Cargas de pequeños artefactos y lavandería en unidades de vivienda:
     - Artículo 220.52, pág. 78, NTC 2050 segunda actualización.
 
+- Cargas para pequeños artefactos y lavandería en unidades de vivienda:
+    - Artículo 220.53, pág. 78, NTC 2050 segunda actualización.
+
+- Secadoras eléctricas de ropa en unidades de vivienda:
+    - Artículo 220.54, pág. 78, NTC 2050 segunda actualización.
+
+- Estufas eléctricas y otros pequeños artefactos de cocina para unidades de vivienda.
+    - Artículo 220.55, pág. 78, NTC 2050 segunda actualización.
+
+- Equipos de cocina en unidades diferentes de las de vivienda:
+    - Artículo 220.56, pág. 80, NTC 2050 segunda actualización.
+
+- Cargas no coincidentes:
+    - Artículo 220.60, pág. 80, NTC 2050 segunda actualización.
 
 ### Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización)
 
