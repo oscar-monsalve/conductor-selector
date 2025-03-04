@@ -48,8 +48,14 @@ previous regulation/standard may also be given for completeness:
     - Artículo 210.11 (C)(1), pág. 59, NTC 2050 segunda actualización.
     - Artículo 220-4 (b), pág. 64, NTC 2050 primera actualización.
 
-- Protección máxima contra sobrecorriente:
+- Protección máxima contra sobrecorriente según calíbre del conductor:
     - Artículo 240.4(D)(1)-(7), pág. 107, NTC 2050 segunda actualización.
+
+- Protección contra sobrecarga de los motores:
+    - Motores de servicio continuo:
+        - Artículo 430.32, pág. 401, NTC 2050 segunda actualización.
+    - Motores de servicio intermitente:
+        - Artículo 430.33, pág. 402 -> remite a Tabla 430.22(E), pág. 398, NTC 2050 segunda actualización.
 
 ### Capacidad de corriente de conductores
 
@@ -83,6 +89,12 @@ previous regulation/standard may also be given for completeness:
 
 - Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
     - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
+
+- Conductores para circuitos de motores:
+    - Motor único:
+        - Artículo 430.22, pág. 397, NTC 2050 segunda actualización.
+    - Varios motores:
+        - Artículo 430.24, pág. 399, NTC 2050 segunda actualización.
 
 ### Canalizaciones
 
