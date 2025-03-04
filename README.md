@@ -110,6 +110,7 @@ previous regulation/standard may also be given for completeness:
 
 - Cargas de tomacorrientes en unidades diferentes a las de vivienda:
     - Artículo 220.44 y Tabla 220.44, pág. 77, NTC 2050 segunda actualización.
+    - Circuito ramal: Artículo 220.14(H) e (I), pág. 76, NTC 2050 segunda actualización.
 
 - Motores:
     - Artículo 220.50, pág. 77, NTC 2050 segunda actualización.
@@ -120,7 +121,7 @@ previous regulation/standard may also be given for completeness:
 - Cargas de pequeños artefactos y lavandería en unidades de vivienda:
     - Artículo 220.52, pág. 78, NTC 2050 segunda actualización.
 
-- Cargas para pequeños artefactos y lavandería en unidades de vivienda:
+- Carga para pequeños artefactos en unidades de vivienda:
     - Artículo 220.53, pág. 78, NTC 2050 segunda actualización.
 
 - Secadoras eléctricas de ropa en unidades de vivienda:
