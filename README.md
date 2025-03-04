@@ -48,6 +48,9 @@ previous regulation/standard may also be given for completeness:
     - Artículo 210.11 (C)(1), pág. 59, NTC 2050 segunda actualización.
     - Artículo 220-4 (b), pág. 64, NTC 2050 primera actualización.
 
+- La protección termomagnética (PTM) mínima para circuitos de lavandería y planchado es de 20 A:
+    - Artículo 210.11(C)(2), pág. 59, NTC 2050 segunda actualización.
+
 - Protección máxima contra sobrecorriente según calíbre del conductor:
     - Artículo 240.4(D)(1)-(7), pág. 107, NTC 2050 segunda actualización.
 
