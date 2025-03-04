@@ -83,18 +83,18 @@ previous regulation/standard may also be given for completeness:
     - Artículo 310.10 (H)(1), pág. 185, NTC 2050 segunda actualización.
     - Sección 310-4, pág. 143, NTC 2050 primera actualización.
 
-- Propiedades de los conductores (cálculo de caída de tensión):
-    - Tabla 8, pág. 962, NTC 2050 segunda actualización.
-    - Tabla 8, pág. 728, NTC 2050 primera actualización.
-
-- Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
-    - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
-
 - Conductores para circuitos de motores:
     - Motor único:
         - Artículo 430.22, pág. 397, NTC 2050 segunda actualización.
     - Varios motores:
         - Artículo 430.24, pág. 399, NTC 2050 segunda actualización.
+
+- Aplicaciones y aislamiento de conductores con tensión nominal de 600 V:
+    - Tabla 310.104(A), pág. 205, NTC 2050 segunda actualización.
+
+- Propiedades de los conductores (cálculo de caída de tensión):
+    - Tabla 8, pág. 962, NTC 2050 segunda actualización.
+    - Tabla 8, pág. 728, NTC 2050 primera actualización.
 
 ### Canalizaciones
 
@@ -157,4 +157,3 @@ previous regulation/standard may also be given for completeness:
 - Acometida subterránea según Artículo 230.31 (B), pág. 96, NTC 2050 segunda actualización:
     - Cobre: calibre no menor a 8 AWG.
     - Aluminio: calibre no menor a 6 AWG.
-
