@@ -160,3 +160,7 @@ previous regulation/standard may also be given for completeness:
 - Acometida subterránea según Artículo 230.31 (B), pág. 96, NTC 2050 segunda actualización:
     - Cobre: calibre no menor a 8 AWG.
     - Aluminio: calibre no menor a 6 AWG.
+
+- Cálcula de acometida para cargas continuas y no continuas:
+    - Artículo 230.42(A)(1), pág. 97, NTC 2050 segunda actualización.
+
