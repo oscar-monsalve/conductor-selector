@@ -26,7 +26,7 @@ def main() -> None:
     conductor_resistance = h.find_conductor_resistance(phase_caliber)
     voltage_drop = h.voltage_drop(POWER_SYSTEM_TYPE, voltage_level, load_current, DT, conductor_resistance)
 
-    # if voltage_drop > 3:
+    # if voltage_drop > 2:
     #     current_index = list(h.copper_caliber).index(phase_caliber)
     #     for i,
 
