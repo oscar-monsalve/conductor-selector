@@ -1,6 +1,5 @@
 from math import sqrt
 
-# TODO: add and program the selection of conduit EMT type.
 
 # Conductor caliber and capacity of current (ampacity) in amps for Copper at 60 °C, Table 310.15(B)(16), NTC 2050 segunda actualización, pag. 191.
 copper_caliber = {
@@ -37,7 +36,7 @@ conductor_resistance = {
 }
 
 # Nominal standard thermomagnetic protection values in amps, Table 240.6(A) NTC 2050, pag. 109.
-thermomagnetic_potection_values = [
+thermomagnetic_protection_values = [
     15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80,
     90, 100, 110, 125, 150, 175, 200, 225, 250,
     300, 350, 400, 450, 500, 600, 700, 800, 1000,
@@ -78,8 +77,21 @@ single_conductor_area = {
     "4/0 AWG": 208.8,
 }
 
-# PVC type A conduit's commercial diameter in inches for more than 2 threads at 40% depending on the total area of the conductors in mm^2,
-# Table 5, NTC 2050 segunda actualización, pag. 958.
+# EMT conduit's commercial diameter in inches for more than 2 threads at 40%, Table 5, NTC 2050 segunda actualización, pag. 958.
+conduit_emt_commercial_diameter = {
+    "1/2 inch": 78,
+    "3/4 inch": 137,
+    "1 inch": 222,
+    "1 1/4 inch": 387,
+    "1 1/2 inch": 526,
+    "2 inch": 866,
+    "2 1/2 inch": 1513,
+    "3 inch": 2280,
+    "3 1/2 inch": 2980,
+    "4 inch": 3808,
+}
+
+# PVC type A conduit's commercial diameter in inches for more than 2 threads at 40%, Table 5, NTC 2050 segunda actualización, pag. 958.
 conduit_pvc_type_A_commercial_diameter = {
     "1/2 inch": 100,
     "3/4 inch": 168,
@@ -210,7 +222,7 @@ def voltage_drop(power_system_type: str, voltage_level: float, load_current: flo
 
 
 def select_proper_caliber(load_current: float, power_system_type: int, voltage_level: float,
-                          distance_to_board: float, nc=1) -> tuple[str, float]:
+                          distance_to_board: float, nc=1) -> tuple[str, float, float]:
     # List of calibers that can handle the load current
     caliber_options = find_caliber(load_current)
 
@@ -227,23 +239,29 @@ def select_proper_caliber(load_current: float, power_system_type: int, voltage_l
 
 
 def find_thermoelectric_protection(load_current: float, caliber: str) -> int:
+    protection_default_values = {
+        "14 AWG": 15,
+        "12 AWG": 20,
+        "10 AWG": 30,
+    }
+
     if load_current > 195:
         raise ValueError(f"The load current ({load_current} A) surpasses the limit current of 195 A.")
-    elif caliber == "14 AWG":
-        return 15
-    elif caliber == "12 AWG":
-        return 20
-    elif caliber == "10 AWG":
-        return 30
-    else:
-        for i in reversed(thermomagnetic_potection_values):
-            if i <= load_current:
-                return i
+
+    elif caliber in protection_default_values:
+        return protection_default_values[caliber]
+
+    for i in reversed(thermomagnetic_protection_values):
+        if i <= load_current:
+            return i
+
+    # If load_current is < to the smallest value in thermoelectric_protection_values, return the smallest available protection
+    return thermomagnetic_protection_values[0]
 
 
 def find_ground_caliber(thermomagnetic_protection_current: int) -> str:
     for ground_caliber, nominal_current in list(copper_ground_caliber.items()):
-        if nominal_current > thermomagnetic_protection_current:
+        if nominal_current >= thermomagnetic_protection_current:
             return ground_caliber
 
 
@@ -260,5 +278,10 @@ def find_conduit_diameter_pvc_type_A(total_conductor_area: float) -> str:
                 return commercial_diameter
 
 
-def find_conduit_diameter_emt():
-    pass
+def find_conduit_diameter_emt(total_conductor_area: float) -> str:
+    if total_conductor_area > 3808:
+        raise ValueError(f"No commercial conduit available in EMT for {total_conductor_area} mm^2 because is greater than 3808 mm^2.")
+    else:
+        for commercial_diameter, conduit_standard_area in list(conduit_emt_commercial_diameter.items()):
+            if conduit_standard_area >= total_conductor_area:
+                return commercial_diameter

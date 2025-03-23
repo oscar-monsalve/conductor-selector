@@ -1,39 +1,29 @@
-# Inputs:
-#   - power_system: single-phase or three-phase
-#   - voltage_from_trafo: 208 V, 214 V, or 220 V.
-#   - active_power P: in hp or watts
-#   - power_factor: 0.8 <= fp <= 1
-#   - DT: distance to the distribution board (DDB)
+# ---- Input description ----
+# POWER_SYSTEM_TYPE : 1 for single-phase or 3 for three-phase.
+# TRAFO_VOLTAGE     : Transformer voltage: 208 V, 214 V, or 220 V.
+# ACTIVE_POWER      : Active power numerical value.
+# ACTIVE_POWER_UNIT : Active power unit as "watts", "hp", or "cv".
+# POWER_FACTOR      : Power factor of the load in a range of 0.8 <= POWER_FACTOR <= 1.
+# Distance          : Distance to the distribution board in meters.
+# ---- Input description ----
 #
-# Notes:
-#   - Maximum allowable current: <= 195 A. if higher, the program must throw an exception error.
-#   - Voltage drop: <= 3%. If higher, the program must throw an exception error.
-#   - DT distance: <= 100. If higher, the program must throw an exception error.
-#   - Calculations only for copper conductors at 60 °C.
-#   - Maximum caliber: 4/0 AWG.
-#
-# Outputs:
-#   - Number of the circtuit depending the type of power system: 1, 1-2, 1-2-3.
-#   - Voltage.
-#   - Current.
-#   - Thermomagnetic protection.
-#   - Number of poles.
-#   - DT distance.
-#   - Voltage drop.
-#   - Caliber of the phase conductor.
-#   - Caliber of the neutral conductor.
-#   - Caliber of the ground conductor.
-#   - Diameter of conduit in EMT and PCV type A.
+# ---- Notes ----
+#   - Maximum allowable current : <= 195 A. if higher, the program must throw an exception error.
+#   - Voltage drop              : <= 3%. If higher, the program must throw an exception error.
+#   - DT distance               : <= 100. If higher, the program must throw an exception error.
+#   - Conductors                : only for copper conductors at 60 °C.
+#   - Maximum caliber           : 4/0 AWG.
+# ---- Notes ----
 
 import helpers as h
 
 # ---- Inputs ----
-POWER_SYSTEM_TYPE:   int = 3     # 1 (single-phase) or 3 (three-phase).
-TRAFO_VOLTAGE:       int = 220   # Transformer voltage: 208 V, 214 V, or 220 V.
-ACTIVE_POWER:      float = 20    # Active power in watts, hp or cv.
-ACTIVE_POWER_UNIT:   str = "hp"  # Active power unit as "watts", "hp", or "cv".
-POWER_FACTOR:      float = 0.85  # Range (0.8 <= power factor <= 1)
-DT:                float = 70    # distance to the distribution board in meters.
+POWER_SYSTEM_TYPE:   int = 3
+TRAFO_VOLTAGE:       int = 208
+ACTIVE_POWER:      float = 5
+ACTIVE_POWER_UNIT:   str = "hp"
+POWER_FACTOR:      float = 0.9
+DT:                float = 100
 # ---- Inputs ----
 
 
@@ -72,6 +62,7 @@ def main() -> None:
     area_of_highest_caliber = h.find_phase_caliber_cross_sectional_area(selected_phase_caliber)
     total_conductor_area = total_number_of_conductors * area_of_highest_caliber
     conduit_diameter_pvc_type_A = h.find_conduit_diameter_pvc_type_A(total_conductor_area)
+    conduit_diameter_emt = h.find_conduit_diameter_emt(total_conductor_area)
 
     # Print results
     print(f"System type                 : {system_type}")
@@ -84,9 +75,10 @@ def main() -> None:
     print(f"Phase caliber               : {number_of_phases} x {selected_phase_caliber} ({nominal_current_selected_caliber} A).")
     print(f"Neutral caliber             : 1 x {selected_phase_caliber}.")
     print(f"Ground caliber              : 1 x {selected_ground_caliber}.")
-    print(f"Conductor individual area   : {area_of_highest_caliber} mm^2 ({selected_phase_caliber}).")
-    # print(f"Total conductor area        : {total_conductor_area:.2f} mm^2.")
-    print(f"Conduit commercial diameter : {conduit_diameter_pvc_type_A} (PVC type A).")
+    print(f"Individual conductor area   : {area_of_highest_caliber} mm^2 ({selected_phase_caliber}).")
+    print(f"Total conductor area        : {total_conductor_area:.2f} mm^2.")
+    print(f"Conduit PVC type A diameter : {conduit_diameter_pvc_type_A}.")
+    print(f"Conduit EMT diameter        : {conduit_diameter_emt}.")
 
 
 if __name__ == "__main__":
