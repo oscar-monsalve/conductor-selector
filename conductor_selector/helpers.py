@@ -106,15 +106,20 @@ conduit_pvc_type_A_commercial_diameter = {
 }
 
 
-def power_system_information(power_system_type: int) -> [str, str, int, int, int]:
-    # TODO: add the variable "conduit type: str" for PVC type A or EMT
+def power_system_information(power_system_type: int) -> tuple[str, str, int, int, int]:
     if power_system_type == 1:
         circuit = "1"
         system_type = "single-phase"
         number_of_phases = 1
         total_number_of_conductors = 3
         number_of_poles = 1
-    if power_system_type == 3:
+    elif power_system_type == 2:
+        circuit = "1-2"
+        system_type = "two-phase"
+        number_of_phases = 2
+        total_number_of_conductors = 4
+        number_of_poles = 2
+    elif power_system_type == 3:
         circuit = "1-2-3"
         system_type = "three-phase"
         number_of_phases = 3
@@ -124,14 +129,14 @@ def power_system_information(power_system_type: int) -> [str, str, int, int, int
 
 
 def check_power_system_type(power_system_type: float) -> None:
-    if power_system_type not in [1, 3]:
-        raise ValueError("Insert 1 for single-phase or 3 for three-phase.")
+    if power_system_type not in (1, 2, 3):
+        raise ValueError("Insert 1 for single-phase, 2 for two-phase, or 3 for three-phase.")
     else:
         return
 
 
 def check_trafo_voltage(trafo_voltage: float) -> None:
-    if trafo_voltage not in [208, 214, 220]:
+    if trafo_voltage not in (208, 214, 220):
         raise ValueError("The voltage of the transformer can only be 208 V, 214 V, or 220 V. Insert a valid value.")
     else:
         return
@@ -147,7 +152,7 @@ def check_power_factor(fp: float) -> None:
 
 
 def check_dt_distance(dt_distance: float) -> None:
-    if dt_distance > 100:
+    if dt_distance > 200:
         raise ValueError("The maximum distance to the distribution board is 100 m. Insert a new distance.")
     else:
         return
@@ -171,12 +176,13 @@ def check_voltage_drop(voltage_drop: float) -> None:
 def voltage_level(power_system_type: int, voltage_from_trafo: float) -> float:
     if power_system_type == 1:
         return voltage_from_trafo / sqrt(3)
-    if power_system_type == 3:
+    if power_system_type in (2, 3):
         return voltage_from_trafo
+    raise ValueError("Invalid power system type.")
 
 
 def active_power_conversion(active_power: float, active_power_unit: str) -> float:
-    if active_power_unit not in ["watts", "hp", "cv"]:
+    if active_power_unit not in ("watts", "hp", "cv"):
         raise ValueError("Enter a valid unit of power, e.g. 'watts', 'hp', 'cv'")
     elif active_power_unit == "watts":
         return active_power
@@ -191,7 +197,7 @@ def apparent_power(active_power: float, power_factor: float) -> float:
 
 
 def load_current(power_system_type: int, apparent_power: float, voltage_level: float) -> float:
-    if power_system_type == 1:
+    if power_system_type in (1, 2):
         return apparent_power / voltage_level
     if power_system_type == 3:
         return apparent_power / (sqrt(3) * voltage_level)
@@ -213,7 +219,7 @@ def voltage_drop(power_system_type: str, voltage_level: float, load_current: flo
                  conductor_resistance: float, nc=1) -> float:
     if voltage_level == 0:
         raise ValueError("Voltage level cannot be zero. Othewise there will be division by zero")
-    if power_system_type == 1:
+    if power_system_type in (1, 2):
         return (2 * distance_to_board * conductor_resistance * load_current) / (1000 * voltage_level * nc) * 100
     if power_system_type == 3:
         return (sqrt(3) * distance_to_board * conductor_resistance * load_current) / (1000 * voltage_level * nc) * 100
@@ -223,8 +229,7 @@ def voltage_drop(power_system_type: str, voltage_level: float, load_current: flo
 
 def select_proper_caliber(load_current: float, power_system_type: int, voltage_level: float,
                           distance_to_board: float, nc=1) -> tuple[str, float, float]:
-    # List of calibers that can handle the load current
-    caliber_options = find_caliber(load_current)
+    caliber_options = find_caliber(load_current)  # List of calibers that can handle the load current
 
     for caliber, nominal_current in caliber_options:
         conductor_resistance = find_conductor_resistance(caliber)

@@ -1,10 +1,10 @@
 # ---- Input description ----
-# POWER_SYSTEM_TYPE : 1 for single-phase or 3 for three-phase.
+# POWER_SYSTEM_TYPE : 1 for single-phase, 2 for two-phase, or 3 for three-phase.
 # TRAFO_VOLTAGE     : Transformer voltage: 208 V, 214 V, or 220 V.
 # ACTIVE_POWER      : Active power numerical value.
 # ACTIVE_POWER_UNIT : Active power unit as "watts", "hp", or "cv".
 # POWER_FACTOR      : Power factor of the load in a range of 0.8 <= POWER_FACTOR <= 1.
-# Distance          : Distance to the distribution board in meters.
+# DT                : Distance to the distribution board in meters (DT <= 100 m).
 # ---- Input description ----
 #
 # ---- Notes ----
@@ -18,12 +18,12 @@
 import helpers as h
 
 # ---- Inputs ----
-POWER_SYSTEM_TYPE:   int = 3
-TRAFO_VOLTAGE:       int = 208
-ACTIVE_POWER:      float = 5
-ACTIVE_POWER_UNIT:   str = "hp"
-POWER_FACTOR:      float = 0.9
-DT:                float = 100
+POWER_SYSTEM_TYPE:   int = 1
+TRAFO_VOLTAGE:       int = 214
+ACTIVE_POWER:      float = 5*3000
+ACTIVE_POWER_UNIT:   str = "watts"
+POWER_FACTOR:      float = 1
+DT:                float = 27
 # ---- Inputs ----
 
 
@@ -51,7 +51,6 @@ def main() -> None:
     h.check_load_current(load_current)
 
     (
-        # TODO: add the variable "conduit type: str" for PVC type A or EMT and replace it in the printing of "Conduit commercial diameter"
         selected_phase_caliber,
         nominal_current_selected_caliber,
         final_voltage_drop
@@ -66,19 +65,22 @@ def main() -> None:
 
     # Print results
     print(f"System type                 : {system_type}")
-    print(f"System voltage              : {voltage_level:.2f} V.")
-    print(f"Active power                : {active_power_watts:.2f} W.")
-    print(f"Apparent power              : {apparent_power:.2f} VA.")
-    print(f"Load current                : {load_current:.2f} A.")
-    print(f"Thermoelectric protection   : {thermoelectric_protection} A.")
-    print(f"Voltage drop                : {final_voltage_drop:.2f} % (for {selected_phase_caliber}).")
-    print(f"Phase caliber               : {number_of_phases} x {selected_phase_caliber} ({nominal_current_selected_caliber} A).")
-    print(f"Neutral caliber             : 1 x {selected_phase_caliber}.")
-    print(f"Ground caliber              : 1 x {selected_ground_caliber}.")
-    print(f"Individual conductor area   : {area_of_highest_caliber} mm^2 ({selected_phase_caliber}).")
-    print(f"Total conductor area        : {total_conductor_area:.2f} mm^2.")
-    print(f"Conduit PVC type A diameter : {conduit_diameter_pvc_type_A}.")
-    print(f"Conduit EMT diameter        : {conduit_diameter_emt}.")
+    print(f"Circuit                     : {circuit}")
+    print(f"System voltage              : {voltage_level:.2f} V")
+    print(f"Active power                : {active_power_watts:.2f} W")
+    print(f"Apparent power              : {apparent_power:.2f} VA")
+    print(f"Load current                : {load_current:.2f} A")
+    print(f"Thermoelectric protection   : {thermoelectric_protection} A")
+    print(f"Number of poles             : {number_of_poles}")
+    print(f"Voltage drop                : {final_voltage_drop:.2f} % (for {selected_phase_caliber})")
+    print(f"Phase caliber               : {number_of_phases} x {selected_phase_caliber} ({nominal_current_selected_caliber} A)")
+    print(f"Neutral caliber             : 1 x {selected_phase_caliber}")
+    print(f"Ground caliber              : 1 x {selected_ground_caliber}")
+    print(f"Distance to the board (DT)  : {DT} m")
+    print(f"Individual conductor area   : {area_of_highest_caliber} mm^2 ({selected_phase_caliber})")
+    print(f"Total conductor area        : {total_conductor_area:.2f} mm^2")
+    print(f"Conduit PVC type A diameter : {conduit_diameter_pvc_type_A}")
+    print(f"Conduit EMT diameter        : {conduit_diameter_emt}")
 
 
 if __name__ == "__main__":
