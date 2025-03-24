@@ -153,7 +153,7 @@ def check_power_factor(fp: float) -> None:
 
 def check_dt_distance(dt_distance: float) -> None:
     if dt_distance > 200:
-        raise ValueError("The maximum distance to the distribution board is 100 m. Insert a new distance.")
+        raise ValueError("The maximum distance to the distribution board is 200 m. Insert a new distance.")
     else:
         return
 

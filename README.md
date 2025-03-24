@@ -1,6 +1,6 @@
 # Electrical conductor selector
 
-It enables the selection of the phase, neutral and earth electrical conductors and its adequate canalization for
+It enables the selection of the phase, neutral and ground electrical conductors and its adequate canalization for
 an electrical installation (whether industrial or residential). This is based on the Colombian regulation "RETIE 2024"
 and the standard "NTC 2050 segunda actualización".
 
