@@ -22,8 +22,8 @@ POWER_SYSTEM_TYPE:   int = 1
 TRAFO_VOLTAGE:       int = 208
 ACTIVE_POWER:      float = 1500
 ACTIVE_POWER_UNIT:   str = "watts"
-POWER_FACTOR:      float = 1
-DT:                float = 5
+POWER_FACTOR:      float = 0.8
+DT:                float = 30
 # ---- Inputs ----
 
 
