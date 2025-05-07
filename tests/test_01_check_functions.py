@@ -1,6 +1,11 @@
 import pytest
-from conductor_selector.helpers import (check_power_system_type, check_trafo_voltage, check_load_current,
-                                        check_power_factor, check_dt_distance)
+from conductor_selector.helpers import (
+    check_power_system_type,
+    check_trafo_voltage,
+    check_load_current,
+    check_power_factor,
+    check_dt_distance,
+)
 
 
 def test_check_power_system_correct_input():
