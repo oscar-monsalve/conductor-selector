@@ -224,7 +224,7 @@ def voltage_drop(power_system_type: str, voltage_level: float, load_current: flo
     if power_system_type == 3:
         return (sqrt(3) * distance_to_board * conductor_resistance * load_current) / (1000 * voltage_level * nc) * 100
     else:
-        raise ValueError("Invalid power system type. Use 1 (single-phase) or 3 (three-phase)")
+        raise ValueError("Invalid power system type. Insert 1 for single-phase, 2 for two-phase, or 3 for three-phase.")
 
 
 def select_proper_caliber(load_current: float, power_system_type: int, voltage_level: float,
