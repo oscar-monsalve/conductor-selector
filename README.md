@@ -25,6 +25,9 @@ previous regulation/standard may also be given for completeness:
 
 ### Información general
 
+- Clasificación de los niveles de tensión:
+    - Título 9, pág. 25, RETIE 2024 libro 3.
+
 - Aplicación de normas tecnicas:
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
