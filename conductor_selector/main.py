@@ -20,10 +20,10 @@ import helpers as h
 # ---- Inputs ----
 POWER_SYSTEM_TYPE:   int = 1
 TRAFO_VOLTAGE:       int = 208
-ACTIVE_POWER:      float = 1500
+ACTIVE_POWER:      float = 20000
 ACTIVE_POWER_UNIT:   str = "watts"
 POWER_FACTOR:      float = 0.8
-DT:                float = 30
+DT:                float = 5
 # ---- Inputs ----
 
 
