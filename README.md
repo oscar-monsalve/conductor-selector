@@ -4,7 +4,17 @@ It enables the selection of the phase, neutral and ground electrical conductors 
 an electrical installation (whether industrial or residential). This is based on the Colombian regulation "RETIE 2024"
 and the standard "NTC 2050 segunda actualización".
 
-## User inputs:
+
+## User inputs given at ```conductor_selector/main.py```:
+
+| Input                | Description                                                                         |
+|--------------------- | ----------------------------------------------------------------------------------- |
+| POWER_SYSTEM_TYPE    | Power system type: 1 or 2 or 3 for single-, two-, or three-phase, respectively      |
+| TRAFO_VOLTAGE        | Transformer line-to-line voltage: 208 V, 214 V, or 220 V                            |
+| ACTIVE_POWER         | Active power numerical value                                                        |
+| ACTIVE_POWER_UNIT    | Active power unit as "watts", "hp", or "cv"                                         |
+| POWER_FACTOR         | Power factor of the load in a range of $$0.8 \leq \text{POWER_FACTOR} \leq 1$$      |
+| DT                   | Distance to the distribution board in meters $$(DT \leq 100 m)$$                    |
 
 
 ## Legal information
@@ -166,4 +176,5 @@ previous regulation/standard may also be given for completeness:
 
 - Cálcula de acometida para cargas continuas y no continuas:
     - Artículo 230.42(A)(1), pág. 97, NTC 2050 segunda actualización.
+
 
