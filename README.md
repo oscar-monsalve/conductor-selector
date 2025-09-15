@@ -25,10 +25,15 @@ contradicts any requirement or criterion established the Regulation, the provisi
 precedence over the standard (RETIE 2024, libro 3, título 24, pág. 133).
 
 - [Reglamento Técnico de Instalaciones Eléctricas - RETIE](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/), published in 2024 by the Colombian Ministry of Mines and
-Energy (Ministerio de Minas y Energía). This is a public document.
+  Energy (Ministerio de Minas y Energía). This is a public document.
 
 - [Código Eléctrico Colombiano - NTC 2050. Segunda actualización](https://tienda.icontec.org/gpd-pb-9-codigo-electrico-colombiano-ntc-2050-segunda-actualizacion.html), published in 2019 by the  Instituto Colombiano de
-Normas Técnicas y Certificación (ICONTEC). This is a copyrighted document.
+  Normas Técnicas y Certificación (ICONTEC). This is a copyrighted document.
+
+The regulation for electgrical lighting installations is ruled by the "Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP":
+
+- [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-iluminaci%C3%B3n-y-alumbrado-p%C3%BAblico-retilap/), published in 2024 by the Colombian Ministry of Mines and
+  Energy (Ministerio de Minas y Energía). This is a public document.
 
 The following (in Spanish) are the most used sources of information from both RETIE and NTC 2050. Some references to
 previous regulation/standard may also be given for completeness:
@@ -178,3 +183,13 @@ previous regulation/standard may also be given for completeness:
     - Artículo 230.42(A)(1), pág. 97, NTC 2050 segunda actualización.
 
 
+##  Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2024
+
+- Iluminación mínima para aulas de clase:
+    - pág. 40, libro 3, RETILAP 2024.
+
+- VEEI:
+    - pág. 59, libro 3, RETILAP 2024.
+
+- Medición y cálculo de iluminancia:
+    - pág. 49, libro 3, RETILAP 2024.
