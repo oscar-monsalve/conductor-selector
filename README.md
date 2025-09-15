@@ -13,8 +13,8 @@ and the standard "NTC 2050 segunda actualización".
 | TRAFO_VOLTAGE        | Transformer line-to-line voltage: 208 V, 214 V, or 220 V                            |
 | ACTIVE_POWER         | Active power numerical value                                                        |
 | ACTIVE_POWER_UNIT    | Active power unit as "watts", "hp", or "cv"                                         |
-| POWER_FACTOR         | Power factor of the load in a range of $$0.8 \leq \text{POWER_FACTOR} \leq 1$$      |
-| DT                   | Distance to the distribution board in meters $$(DT \leq 100 m)$$                    |
+| POWER_FACTOR         | Power factor of the load in a range of $$0.8 \leq \mathrm{POWER_FACTOR} \leq 1$$      |
+| DT                   | Distance to the distribution board in meters (DT $$\leq$$ 100 m)                    |
 
 
 ## Legal information
