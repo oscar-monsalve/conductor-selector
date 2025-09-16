@@ -185,11 +185,19 @@ previous regulation/standard may also be given for completeness:
 
 ##  Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2024
 
-- Iluminación mínima para aulas de clase:
-    - pág. 40, libro 3, RETILAP 2024.
+- Requisitos de iluminación de ambientes, áreas de trabajo, tarea visual y actividades en interiores:
+    - Tabla 3.2.2.6 a, pág. 26, libro 3, RETILAP 2024.
+    - Iluminación mínima para locales y edificios educativos:
+        - Tabla 3.2.2.6 a, pág. 40, libro 3, RETILAP 2024.
 
-- VEEI:
-    - pág. 59, libro 3, RETILAP 2024.
+- Eficiencia energética en las instalaciones de sistemas de iluminación interior (VEEI):
+    - Artículo 3.2.5, pág. 59, libro 3, RETILAP 2024.
 
 - Medición y cálculo de iluminancia:
     - pág. 49, libro 3, RETILAP 2024.
+
+- Cálculos para iluminación interior:
+    - Artículo 3.2.3, pág, 48, libro 3, RETILAP 2024.
+    - Superficie de cálculo de iluminancia:
+        - Artículo 3.2.3.1, pág. 48, libro 3, RETILAP 2024.
+        - Figura 3.2.3.1. a, pág. 49, libro 3, RETILAP, 2024.
