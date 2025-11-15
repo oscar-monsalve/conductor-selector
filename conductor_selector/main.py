@@ -3,14 +3,14 @@
 # TRAFO_VOLTAGE     : Transformer voltage: 208 V, 214 V, or 220 V.
 # ACTIVE_POWER      : Active power numerical value.
 # ACTIVE_POWER_UNIT : Active power unit as "watts", "hp", or "cv".
-# POWER_FACTOR      : Power factor of the load in a range of 0.8 <= POWER_FACTOR <= 1.
-# DT                : Distance to the distribution board in meters (DT <= 100 m).
+# POWER_FACTOR      : Power factor of the load in a range of 0.65 <= POWER_FACTOR <= 1.
+# DT                : Distance to the distribution board in meters (DT <= 110 m).
 # ---- Input description ----
 #
 # ---- Notes ----
 #   - Maximum allowable current : <= 195 A. if higher, the program must throw an exception error.
 #   - Voltage drop              : <= 3%. If higher, the program must throw an exception error.
-#   - DT distance               : <= 100. If higher, the program must throw an exception error.
+#   - DT distance               : <= 110. If higher, the program must throw an exception error.
 #   - Conductors                : only for copper conductors at 60 °C.
 #   - Maximum caliber           : 4/0 AWG.
 # ---- Notes ----
@@ -18,12 +18,12 @@
 import helpers as h
 
 # ---- Inputs ----
-POWER_SYSTEM_TYPE:   int = 1
-TRAFO_VOLTAGE:       int = 208
-ACTIVE_POWER:      float = 20000
+POWER_SYSTEM_TYPE:   int = 3
+TRAFO_VOLTAGE:       int = 220
+ACTIVE_POWER:      float = 30000
 ACTIVE_POWER_UNIT:   str = "watts"
 POWER_FACTOR:      float = 0.8
-DT:                float = 5
+DT:                float = 10
 # ---- Inputs ----
 
 

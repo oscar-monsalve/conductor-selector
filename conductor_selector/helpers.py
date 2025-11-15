@@ -143,8 +143,9 @@ def check_trafo_voltage(trafo_voltage: float) -> None:
 
 
 def check_power_factor(fp: float) -> None:
-    if fp < 0.8:
-        raise ValueError("The fp is less than 0.8. It must range between 0.8 and 1 (both inclusive). Insert again the fp value.")
+    fp_lower_limit = 0.65
+    if fp < fp_lower_limit:
+        raise ValueError(f"The fp is less than {fp_lower_limit}. It must range between {fp_lower_limit} and 1 (both inclusive). Insert again the fp value.")
     if fp > 1:
         raise ValueError("The fp is greater than 1.0. It must range between 0.8 and 1 (both inclusive). Insert again the fp value.")
     else:
@@ -152,8 +153,9 @@ def check_power_factor(fp: float) -> None:
 
 
 def check_dt_distance(dt_distance: float) -> None:
-    if dt_distance > 200:
-        raise ValueError("The maximum distance to the distribution board is 200 m. Insert a new distance.")
+    dt_distance_upper_limit = 110
+    if dt_distance > 110:
+        raise ValueError(f"The maximum distance to the distribution board is {dt_distance_upper_limit:.0f} m. Insert a new distance.")
     else:
         return
 
