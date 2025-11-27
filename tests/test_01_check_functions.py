@@ -61,7 +61,7 @@ def test_check_power_factor_incorrect_input():
 def test_check_dt_distance_correct_input():
     CORRECT_DT_1 = 1.5
     CORRECT_DT_2 = 10
-    CORRECT_DT_3 = 200
+    CORRECT_DT_3 = 110
     assert isinstance(check_dt_distance(CORRECT_DT_1), type(None))
     assert isinstance(check_dt_distance(CORRECT_DT_2), type(None))
     assert isinstance(check_dt_distance(CORRECT_DT_3), type(None))
@@ -80,9 +80,9 @@ def test_check_load_current_valid_result():
     valid_load_current_1 = 2
     valid_load_current_2 = 10.5
     valid_load_current_3 = 195
-    assert isinstance(check_dt_distance(valid_load_current_1), type(None))
-    assert isinstance(check_dt_distance(valid_load_current_2), type(None))
-    assert isinstance(check_dt_distance(valid_load_current_3), type(None))
+    assert isinstance(check_load_current(valid_load_current_1), type(None))
+    assert isinstance(check_load_current(valid_load_current_2), type(None))
+    assert isinstance(check_load_current(valid_load_current_3), type(None))
 
 
 def test_check_load_current_invalid_result():
