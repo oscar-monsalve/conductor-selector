@@ -15,7 +15,7 @@
 #   - Maximum caliber           : 4/0 AWG.
 # ---- Notes ----
 
-import helpers as h
+from conductor_selector import helpers as h
 
 # ---- Inputs ----
 POWER_SYSTEM_TYPE:   int = 3
