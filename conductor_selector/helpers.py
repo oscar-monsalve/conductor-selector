@@ -65,7 +65,7 @@ def check_dt_distance(dt_distance: float) -> None:
 
 def check_load_current(load_current: float) -> None:
     if load_current > MAXIMUM_LOAD_CURRENT:
-        raise ValueError(f"The load current is {load_current:.2f}. The maximum allowable current is {MAXIMUM_LOAD_CURRENT} A. Reduce the input active power until this condition is met.")
+        raise ValueError(f"The load current is {load_current:.2f} A. The maximum allowable current is {MAXIMUM_LOAD_CURRENT} A. Reduce the input active power until this condition is met.")
     else:
         return
 
