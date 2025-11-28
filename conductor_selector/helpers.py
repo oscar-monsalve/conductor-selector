@@ -1,109 +1,14 @@
 from math import sqrt
+from conductor_selector import ntc2050_data as ntc
 
-
-# Conductor caliber and capacity of current (ampacity) in amps for Copper at 60 °C, Table 310.15(B)(16), NTC 2050 segunda actualización, pag. 191.
-copper_caliber = {
-    "14 AWG": 15,
-    "12 AWG": 20,
-    "10 AWG": 30,
-    "8 AWG": 40,
-    "6 AWG": 55,
-    "4 AWG": 70,
-    "3 AWG": 85,
-    "2 AWG": 95,
-    "1 AWG": 110,
-    "1/0 AWG": 125,
-    "2/0 AWG": 145,
-    "3/0 AWG": 165,
-    "4/0 AWG": 195,
-}
-
-# Conductor resistance for Copper (coated, "recubierto") in ohms/km, Table 8 NTC 2050, pag. 962.
-conductor_resistance = {
-    "14 AWG": 10.7,
-    "12 AWG": 6.73,
-    "10 AWG": 4.226,
-    "8 AWG": 2.653,
-    "6 AWG": 1.671,
-    "4 AWG": 1.053,
-    "3 AWG": 0.833,
-    "2 AWG": 0.661,
-    "1 AWG": 0.524,
-    "1/0 AWG": 0.415,
-    "2/0 AWG": 0.329,
-    "3/0 AWG": 0.261,
-    "4/0 AWG": 0.205,
-}
-
-# Nominal standard thermomagnetic protection values in amps, Table 240.6(A) NTC 2050, pag. 109.
-thermomagnetic_protection_values = [
-    15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80,
-    90, 100, 110, 125, 150, 175, 200, 225, 250,
-    300, 350, 400, 450, 500, 600, 700, 800, 1000,
-    1200, 1600, 2000, 2500, 3000, 4000, 5000, 6000
-]
-
-# Ground conductor minimum caliber for Copper, Table 250.122, NTC 2050 segunda actualización, pag. 154.
-copper_ground_caliber = {
-    "14 AWG": 15,
-    "12 AWG": 20,
-    "10 AWG": 60,
-    "8 AWG": 100,
-    "6 AWG": 200,
-    "4 AWG": 300,
-    "3 AWG": 400,
-    "2 AWG": 500,
-    "1 AWG": 600,
-    "1/0 AWG": 800,
-    "2/0 AWG": 1000,
-    "3/0 AWG": 1200,
-    "4/0 AWG": 1600,
-}
-
-# Single conductor's cross-sectional area in mm^2 (with isolation tpye THHN, THWN,f THWN-2), Table 5, NTC 2050 segunda actualización, pag. 958.
-single_conductor_area = {
-    "14 AWG": 6.258,
-    "12 AWG": 8.581,
-    "10 AWG": 13.61,
-    "8 AWG": 23.61,
-    "6 AWG": 32.71,
-    "4 AWG": 53.16,
-    "3 AWG": 62.77,
-    "2 AWG": 74.71,
-    "1 AWG": 100.8,
-    "1/0 AWG": 119.7,
-    "2/0 AWG": 143.4,
-    "3/0 AWG": 172.8,
-    "4/0 AWG": 208.8,
-}
-
-# EMT conduit's commercial diameter in inches for more than 2 threads at 40%, Table 5, NTC 2050 segunda actualización, pag. 958.
-conduit_emt_commercial_diameter = {
-    "1/2 inch": 78,
-    "3/4 inch": 137,
-    "1 inch": 222,
-    "1 1/4 inch": 387,
-    "1 1/2 inch": 526,
-    "2 inch": 866,
-    "2 1/2 inch": 1513,
-    "3 inch": 2280,
-    "3 1/2 inch": 2980,
-    "4 inch": 3808,
-}
-
-# PVC type A conduit's commercial diameter in inches for more than 2 threads at 40%, Table 5, NTC 2050 segunda actualización, pag. 958.
-conduit_pvc_type_A_commercial_diameter = {
-    "1/2 inch": 100,
-    "3/4 inch": 168,
-    "1 inch": 279,
-    "1 1/4 inch": 456,
-    "1 1/2 inch": 600,
-    "2 inch": 940,
-    "2 1/2 inch": 1406,
-    "3 inch": 2112,
-    "3 1/2 inch": 2758,
-    "4 inch": 3543,
-}
+# Define program limits
+MAXIMUM_LOAD_CURRENT:               float = 195.0   # amps
+MAXIMUM_DT_DISTANCE:                float = 110.0   # meters
+MAXIMUM_VOLTAGE_DROP:               float = 3.0     # volts
+LOWER_FP_LIMIT:                     float = 0.65    # -
+UPPER_FP_LIMIT:                     float = 1.0     # -
+MAX_AREA_PVC_TYPE_A_AT_40_PERCENT:  float = 3543.0  # mm^2
+MAX_AREA_EMT_AT_40_PERCENT:         float = 3808.0  # mm^2
 
 
 def power_system_information(power_system_type: int) -> tuple[str, str, int, int, int]:
@@ -143,33 +48,31 @@ def check_trafo_voltage(trafo_voltage: float) -> None:
 
 
 def check_power_factor(fp: float) -> None:
-    fp_lower_limit = 0.65
-    if fp < fp_lower_limit:
-        raise ValueError(f"The fp is less than {fp_lower_limit}. It must range between {fp_lower_limit} and 1 (both inclusive). Insert again the fp value.")
-    if fp > 1:
-        raise ValueError("The fp is greater than 1.0. It must range between 0.8 and 1 (both inclusive). Insert again the fp value.")
+    if fp < LOWER_FP_LIMIT:
+        raise ValueError(f"The fp is less than {LOWER_FP_LIMIT}. It must range between {LOWER_FP_LIMIT} and {UPPER_FP_LIMIT} (both inclusive). Insert again the fp value.")
+    if fp > UPPER_FP_LIMIT:
+        raise ValueError("The fp is greater than {UPPER_FP_LIMIT}. It must range between {LOWER_FP_LIMIT} and {UPPER_FP_LIMIT} (both inclusive). Insert again the fp value.")
     else:
         return
 
 
 def check_dt_distance(dt_distance: float) -> None:
-    dt_distance_upper_limit = 110
-    if dt_distance > 110:
-        raise ValueError(f"The maximum distance to the distribution board is {dt_distance_upper_limit:.0f} m. Insert a new distance.")
+    if dt_distance > MAXIMUM_DT_DISTANCE:
+        raise ValueError(f"The maximum distance to the distribution board is {MAXIMUM_DT_DISTANCE:.0f} m. Insert a new distance.")
     else:
         return
 
 
 def check_load_current(load_current: float) -> None:
-    if load_current > 195:
-        raise ValueError(f"The load current is {load_current:.2f}. The maximum allowable current is 195 A. Reduce the input active power until this condition is met.")
+    if load_current > MAXIMUM_LOAD_CURRENT:
+        raise ValueError(f"The load current is {load_current:.2f}. The maximum allowable current is {MAXIMUM_LOAD_CURRENT} A. Reduce the input active power until this condition is met.")
     else:
         return
 
 
 def check_voltage_drop(voltage_drop: float) -> None:
-    if voltage_drop > 3:
-        raise ValueError(f"The resulting voltage drop ({voltage_drop:.2f}%) is greater than 3%. Lower it by increasing the conductor caliber.")
+    if voltage_drop > MAXIMUM_VOLTAGE_DROP:
+        raise ValueError(f"The resulting voltage drop ({voltage_drop:.2f}%) is greater than {MAXIMUM_VOLTAGE_DROP}%. Lower it by increasing the conductor caliber.")
     else:
         print("The voltage drop is within an acceptable range")
         return
@@ -207,14 +110,14 @@ def load_current(power_system_type: int, apparent_power: float, voltage_level: f
 
 def find_caliber(load_current: float) -> list[tuple[str, int]]:
     caliber_list = []
-    for caliber, nominal_caliber_current in copper_caliber.items():
+    for caliber, nominal_caliber_current in ntc.copper_caliber.items():
         if load_current <= nominal_caliber_current:
             caliber_list.append((caliber, nominal_caliber_current))
     return caliber_list
 
 
 def find_conductor_resistance(phase_caliber: str) -> float:
-    return conductor_resistance.get(phase_caliber, None)
+    return ntc.conductor_resistance.get(phase_caliber, None)
 
 
 def voltage_drop(power_system_type: str, voltage_level: float, load_current: float, distance_to_board: float,
@@ -239,10 +142,10 @@ def select_proper_caliber(load_current: float, power_system_type: int, voltage_l
             raise ValueError(f"No resistance data available for {caliber}.")
 
         drop = voltage_drop(power_system_type, voltage_level, load_current, distance_to_board, conductor_resistance, nc)
-        if drop <= 3:
+        if drop <= MAXIMUM_VOLTAGE_DROP:
             return caliber, nominal_current, drop
 
-    raise ValueError(f"No available conductor meets the voltage drop requierement. With a caliber of {caliber}, the voltage drop is {drop:.2f}%.")
+    raise ValueError(f"No available conductor meets the voltage drop requierement (<{MAXIMUM_VOLTAGE_DROP}%). With a caliber of {caliber}, the voltage drop is {drop:.2f}%.")
 
 
 def find_thermoelectric_protection(load_current: float, caliber: str) -> int:
@@ -252,43 +155,43 @@ def find_thermoelectric_protection(load_current: float, caliber: str) -> int:
         "10 AWG": 30,
     }
 
-    if load_current > 195:
-        raise ValueError(f"The load current ({load_current} A) surpasses the limit current of 195 A.")
+    if load_current > MAXIMUM_LOAD_CURRENT:
+        raise ValueError(f"The load current ({load_current} A) surpasses the limit current of {MAXIMUM_LOAD_CURRENT} A.")
 
     elif caliber in protection_default_values:
         return protection_default_values[caliber]
 
-    for i in reversed(thermomagnetic_protection_values):
+    for i in reversed(ntc.thermomagnetic_protection_values):
         if i <= load_current:
             return i
 
     # If load_current is < to the smallest value in thermoelectric_protection_values, return the smallest available protection
-    return thermomagnetic_protection_values[0]
+    return ntc.thermomagnetic_protection_values[0]
 
 
 def find_ground_caliber(thermomagnetic_protection_current: int) -> str:
-    for ground_caliber, nominal_current in list(copper_ground_caliber.items()):
+    for ground_caliber, nominal_current in list(ntc.copper_ground_caliber.items()):
         if nominal_current >= thermomagnetic_protection_current:
             return ground_caliber
 
 
 def find_phase_caliber_cross_sectional_area(phase_caliber: str) -> float:
-    return single_conductor_area.get(phase_caliber, None)
+    return ntc.single_conductor_area.get(phase_caliber, None)
 
 
 def find_conduit_diameter_pvc_type_A(total_conductor_area: float) -> str:
-    if total_conductor_area > 3543:
-        raise ValueError(f"No commercial conduit available in PVC type A for {total_conductor_area} mm^2 because is greater than 3543 mm^2.")
+    if total_conductor_area > MAX_AREA_PVC_TYPE_A_AT_40_PERCENT:
+        raise ValueError(f"No commercial conduit available in PVC type A for {total_conductor_area} mm^2 because is greater than {MAX_AREA_PVC_TYPE_A_AT_40_PERCENT} mm^2.")
     else:
-        for commercial_diameter, conduit_standard_area in list(conduit_pvc_type_A_commercial_diameter.items()):
+        for commercial_diameter, conduit_standard_area in list(ntc.conduit_pvc_type_A_commercial_diameter.items()):
             if conduit_standard_area >= total_conductor_area:
                 return commercial_diameter
 
 
 def find_conduit_diameter_emt(total_conductor_area: float) -> str:
-    if total_conductor_area > 3808:
-        raise ValueError(f"No commercial conduit available in EMT for {total_conductor_area} mm^2 because is greater than 3808 mm^2.")
+    if total_conductor_area > MAX_AREA_EMT_AT_40_PERCENT:
+        raise ValueError(f"No commercial conduit available in EMT for {total_conductor_area} mm^2 because is greater than {MAX_AREA_EMT_AT_40_PERCENT} mm^2.")
     else:
-        for commercial_diameter, conduit_standard_area in list(conduit_emt_commercial_diameter.items()):
+        for commercial_diameter, conduit_standard_area in list(ntc.conduit_emt_commercial_diameter.items()):
             if conduit_standard_area >= total_conductor_area:
                 return commercial_diameter
