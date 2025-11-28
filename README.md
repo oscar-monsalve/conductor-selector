@@ -1,3 +1,23 @@
+# How to use the program
+
+Clone the repository and enter it:
+
+```python
+git clone https://github.com/oscar-monsalve/conductor-selector/
+cd conductor_selector
+```
+To execute the program, run the following at the root of the project (```/conductor_selector```):
+
+```python
+python3 -m conductor_selector.main
+```
+
+Test the project with [pytest](https://docs.pytest.org/en/stable/) at the root of the project (```/conductor_selector```) with:
+
+```python
+pytest -v
+```
+
 # Electrical conductor selector
 
 It enables the selection of the phase, neutral and ground electrical conductors and its adequate canalization for
