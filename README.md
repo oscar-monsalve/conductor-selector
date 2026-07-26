@@ -1,3 +1,22 @@
+# Table of Contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [How to use the program](#how-to-use-the-program)
+* [Electrical conductor selector](#electrical-conductor-selector)
+    * [User inputs given at ```conductor_selector/main.py```:](#user-inputs-given-at-conductor_selectormainpy)
+    * [Legal information](#legal-information)
+        * [Información general](#información-general)
+        * [Protecciones termomagnéticas (PTM)](#protecciones-termomagnéticas-ptm)
+        * [Capacidad de corriente de conductores](#capacidad-de-corriente-de-conductores)
+        * [Canalizaciones](#canalizaciones)
+        * [Factores de demanda](#factores-de-demanda)
+        * [Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización)](#acometidas-artículo-230-pág-92-ntc-2050-segunda-actualización)
+    * [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2024](#reglamento-técnico-de-iluminación-y-alumbrado-público---retilap-2024)
+
+<!-- vim-markdown-toc -->
+
+
 # How to use the program
 
 Clone the repository and enter it:
