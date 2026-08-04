@@ -79,6 +79,11 @@ previous regulation/standard may also be given for completeness:
 
 ### Información general
 
+- Requerimientos generales de las instalaciones eléctricas:
+    - Competencia de personas naturales:
+        - Artículo 3.2.1, pág. 9, RETIE 2024 libro 3. Los profesionales competentes para diseñar e intervenir instalaciones eléctricas son Ingenieros Electricistas, Electromecánicos, de Distribución y Redes Eléctricas. Tecnólogos en electricidad o en electromecánica, en sistemas eléctricos de medio y baja tensión, y en mantenimiento eléctrico. Técnicos electricistas.
+        - Artículo 10.2, pág. 49, RETIE 2013.
+
 - Clasificación de los niveles de tensión:
     - Título 9, pág. 25, RETIE 2024 libro 3.
 
