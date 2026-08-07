@@ -2,22 +2,23 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [How to use the program](#how-to-use-the-program)
+* [How to use the script](#how-to-use-the-script)
 * [Electrical conductor selector](#electrical-conductor-selector)
     * [User inputs given at ```conductor_selector/main.py```:](#user-inputs-given-at-conductor_selectormainpy)
     * [Legal information](#legal-information)
         * [Información general](#información-general)
+            * [Capítulo 1 - Requerimientos generales de las instalaciones eléctricas:](#capítulo-1---requerimientos-generales-de-las-instalaciones-eléctricas)
+            * [Capítulo 6 - Requisitos para instalaciones de uso final](#capítulo-6---requisitos-para-instalaciones-de-uso-final)
         * [Protecciones termomagnéticas (PTM)](#protecciones-termomagnéticas-ptm)
         * [Capacidad de corriente de conductores](#capacidad-de-corriente-de-conductores)
         * [Canalizaciones](#canalizaciones)
         * [Factores de demanda](#factores-de-demanda)
-        * [Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización)](#acometidas-artículo-230-pág-92-ntc-2050-segunda-actualización)
-    * [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2024](#reglamento-técnico-de-iluminación-y-alumbrado-público---retilap-2024)
+    * [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2026](#reglamento-técnico-de-iluminación-y-alumbrado-público---retilap-2026)
 
 <!-- vim-markdown-toc -->
 
 
-# How to use the program
+# How to use the script
 
 Clone the repository and enter it:
 
@@ -39,9 +40,7 @@ pytest -v
 
 # Electrical conductor selector
 
-It enables the selection of the phase, neutral and ground electrical conductors and its adequate canalization for
-an electrical installation (whether industrial or residential). This is based on the Colombian regulation "RETIE 2024"
-and the standard "NTC 2050 segunda actualización".
+It enables the selection of the phase, neutral and ground electrical conductors and its adequate canalization for an electrical installation (whether industrial or residential). This is based on the Colombian regulation "RETIE 2024" and the standard "NTC 2050 segunda actualización".
 
 
 ## User inputs given at ```conductor_selector/main.py```:
@@ -58,47 +57,84 @@ and the standard "NTC 2050 segunda actualización".
 
 ## Legal information
 
-All electrical installations in Colombia must comply with the regulation "RETIE 2024" and the first 7 chapters of
-standard "NTC 2050 segunda actualización" plus the tables in chapter 9. In the event that the updating of a standard
-contradicts any requirement or criterion established the Regulation, the provisions of the Regulations shall take
-precedence over the standard (RETIE 2024, libro 3, título 24, pág. 133).
+All electrical installations in Colombia must comply with the regulation "RETIE 2024" and the first 7 chapters of standard "NTC 2050 segunda actualización" plus the tables in chapter 9. In the event that the updating of a standard contradicts any requirement or criterion established the Regulation, the provisions of the Regulations shall take precedence over the standard (RETIE 2024, libro 3, título 24, pág. 133).
 
-- [Reglamento Técnico de Instalaciones Eléctricas - RETIE](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/), published in 2024 by the Colombian Ministry of Mines and
-  Energy (Ministerio de Minas y Energía). This is a public document.
+- [Reglamento Técnico de Instalaciones Eléctricas - RETIE](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-instalaciones-el%C3%A9ctricas-retie/), published in 2024 by the Colombian Ministry of Mines and Energy (Ministerio de Minas y Energía). This is a public document.
 
-- [Código Eléctrico Colombiano - NTC 2050. Segunda actualización](https://tienda.icontec.org/gpd-pb-9-codigo-electrico-colombiano-ntc-2050-segunda-actualizacion.html), published in 2019 by the  Instituto Colombiano de
-  Normas Técnicas y Certificación (ICONTEC). This is a copyrighted document.
+- [Código Eléctrico Colombiano - NTC 2050. Segunda actualización](https://tienda.icontec.org/gpd-pb-9-codigo-electrico-colombiano-ntc-2050-segunda-actualizacion.html), published in 2019 by the  Instituto Colombiano de Normas Técnicas y Certificación (ICONTEC). This is a copyrighted document.
 
 The regulation for electgrical lighting installations is ruled by the "Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP":
 
-- [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-iluminaci%C3%B3n-y-alumbrado-p%C3%BAblico-retilap/), published in 2024 by the Colombian Ministry of Mines and
-  Energy (Ministerio de Minas y Energía). This is a public document.
+- [Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP](https://www.minenergia.gov.co/es/misional/energia-electrica-2/reglamentos-tecnicos/reglamento-t%C3%A9cnico-de-iluminaci%C3%B3n-y-alumbrado-p%C3%BAblico-retilap/), published in 2024 by the Colombian Ministry of Mines and Energy (Ministerio de Minas y Energía). This is a public document.
 
-The following (in Spanish) are the most used sources of information from both RETIE and NTC 2050. Some references to
-previous regulation/standard may also be given for completeness:
+The following (in Spanish) are some of the most used references from both RETIE and NTC 2050. Some references to previous regulation/standard may also be given for completeness:
+
 
 ### Información general
 
-- Requerimientos generales de las instalaciones eléctricas:
-    - Competencia de personas naturales:
-        - Artículo 3.2.1, pág. 9, RETIE 2024 libro 3. Los profesionales competentes para diseñar e intervenir instalaciones eléctricas son Ingenieros Electricistas, Electromecánicos, de Distribución y Redes Eléctricas. Tecnólogos en electricidad o en electromecánica, en sistemas eléctricos de medio y baja tensión, y en mantenimiento eléctrico. Técnicos electricistas.
-        - Artículo 10.2, pág. 49, RETIE 2013.
+#### Capítulo 1 - Requerimientos generales de las instalaciones eléctricas:
 
-- Clasificación de los niveles de tensión:
-    - Título 9, pág. 25, RETIE 2024 libro 3.
+- Título 2 - Competencia de personas naturales:
+    - Artículo 3.2.1, pág. 14, RETIE 2026 libro 3. Los profesionales competentes para diseñar e intervenir instalaciones eléctricas son Ingenieros Electricistas, Electromecánicos, de Distribución y Redes Eléctricas. Tecnólogos en electricidad o en electromecánica, en sistemas eléctricos de medio y baja tensión, y en mantenimiento eléctrico. Técnicos electricistas.
+    - Artículo 3.2.1, pág. 9, RETIE 2024 libro 3. Los profesionales competentes para diseñar e intervenir instalaciones eléctricas son Ingenieros Electricistas, Electromecánicos, de Distribución y Redes Eléctricas. Tecnólogos en electricidad o en electromecánica, en sistemas eléctricos de medio y baja tensión, y en mantenimiento eléctrico. Técnicos electricistas.
+    - Artículo 10.2, pág. 49, RETIE 2013.
 
-- Aplicación de normas tecnicas:
+- Título 5 - Código de colores para conductores de uso eléctrico:
+    - Tabla 3.5.a. Código de colores para conductores de c.a. Pág. 26, RETIE 2026 libro 3.
+    - Tabla 3.5.b. Código de colores para conductores de c.c. Pág. 27, RETIE 2026 libro 3.
+
+- Título 9 - Clasificación de los niveles de tensión:
+    - Pág. 30, RETIE 2026 libro 3.
+    - Pág. 25, RETIE 2024 libro 3.
+
+- Título 11 - Campos electromagnéticos:
+    - El RETIE establece valores de máxima intensidad de campo eléctrico y densidad de flujo magnético en baja frecuencia (0 a 300 Hz), para las zonas donde puedan permanecer personas, independientemente del tiempo de permanencia, los cuales están basados en estudios de la Organización Mundial de la Salud – OMS y de la International Commission on Non-Ionizing Radiation Protection – ICNIRP (revisión 2010). Dichos estudios indican que los campos electromagnéticos de bajas frecuencias no producen efectos nocivos en los seres vivos, para los umbrales establecidos en el presente Reglamento.
+    - Tabla 3.11.1.a. Valores límites de exposición a campos electromagnéticos. Pág. 40, RETIE 2026 libro 3.
+    - Artículo 3.11.2. Medición de campos electromagnéticos. Pág. 41, RETIE 2026 libro 3.
+
+- Título 12 - Sistema de puesta a tierra:
+    - Artículo 3.12.1. Requisitos generales del sistema de puesta a tierra. Pág. 42, RETIE 2026 libro 3.
+    - Artículo 3.12.2. Componentes de los sistemas de puesta a tierra. Pág. 44, RETIE 2026 libro 3.
+    - Artículo 3.12.3. Valores de referencia de resistencia de puesta a tierra. Pág. 47, RETIE 2026 libro 3.
+    - Artículo 3.12.4. Mediciones para sistemas de puesta a tierra. Pág. 48 RETIE 2026 libro 3.
+    - Artículo 3.12.5. Puesta a tierra en sistemas con corriente continua. Pág. 50 RETIE 2026 libro 3.
+    - Artículo 3.12.6. Mantenimiento de sistemas de puesta a tierra. Pág. 50 RETIE 2026 libro 3.
+
+- Título 17 - Requisitos de instalación de los principales productos utilizados en instalaciones eléctricas:
+    - Temperatura de diseño (Artículo 3.17.3. Conductores aislados):
+        - Artículo 3.17.13 (h), pág. 85, RETIE 2026 libro 3: refiere a la NTC 2050 segunda actualización.
+            - 60°C para 100 A nominales o menos, o conductores de 14 AWG a 1 AWG según Artículo 110-14 (C)(1)(a)(1), pág. 37, NTC 2050 segunda actualización.
+            - 75°C para 100 A nominales o mayores, o conductores con calibre mayor a 1 AWG según Artículo 110-14 (C)(1)(b)(1), pág. 37, NTC 2050 segunda actualización.
+            - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
+        - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3.
+
+#### Capítulo 6 - Requisitos para instalaciones de uso final
+
+- Aplicación de normas técnicas:
+    - Título 24, pág. 142, RETIE 2026 libro 3.
     - Título 24, pág. 133, RETIE 2024 libro 3.
 
-- Caída de tensión permitida:
-    - Título 26 (f), pág. 135, RETIE 2024 libro 3. $$\le3\\%$$ para acometidas y $$\le5\\%$$ en alimentadores y circuitos
-      ramales (aguas arriba del transformador de distribución).
+- Régimen de conexión a tierra - RCT:
+    - Título 25, pág. 142, RETIE 2026 libro 3.
+    - Título 25, pág. 133, RETIE 2024 libro 3.
 
-- Temperatura de diseño:
-    - Artículo 3.17.13 (h), pág. 77, RETIE 2024 libro 3. (Esta refiere a la NTC 2050, segunda actualización).
-    - 60°C para 100 A nominales o menos, o conductores de 14 AWG a 1 AWG según Artículo 110-14 (C)(1)(a)(1), pág. 37, NTC 2050 segunda actualización.
-    - 75°C para 100 A nominales o mayores, o conductores con calibre mayor a 1 AWG según Artículo 110-14 (C)(1)(b)(1), pág. 37, NTC 2050 segunda actualización.
-    - Sección 110-14 (c), pág. 40, NTC 2050 primera actualización.
+- Título 26 - Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización):
+
+    - Acometida aérea según Título 26 (d), pág. 144, libro 3, RETIE 2026:
+        - Cobre: calibre no menor a 8 AWG.
+        - Aluminio: calibre no menor a 6 AWG.
+
+    - Acometida subterránea según Artículo 230.31 (B), pág. 96, NTC 2050 segunda actualización (referenciado por el Título 26 (e), RETIE 2026):
+        - Cobre: calibre no menor a 8 AWG.
+        - Aluminio: calibre no menor a 6 AWG.
+
+    - Cálculo de acometida para cargas continuas y no continuas:
+        - Artículo 230.42(A)(1), pág. 97, NTC 2050 segunda actualización.
+
+    - Caída de tensión permitida:
+        - Título 26 (f), pág. 144, RETIE 2026 libro 3. $$\le3\\%$$ para acometidas y $$\le5\\%$$ en alimentadores y circuitos ramales (aguas arriba del transformador de distribución).
+        - Título 26 (f), pág. 135, RETIE 2024 libro 3. $$\le3\\%$$ para acometidas y $$\le5\\%$$ en alimentadores y circuitos ramales (aguas arriba del transformador de distribución).
+
 
 ### Protecciones termomagnéticas (PTM)
 
@@ -113,7 +149,7 @@ previous regulation/standard may also be given for completeness:
 - La protección termomagnética (PTM) mínima para circuitos de lavandería y planchado es de 20 A:
     - Artículo 210.11(C)(2), pág. 59, NTC 2050 segunda actualización.
 
-- Protección máxima contra sobrecorriente según calíbre del conductor:
+- Protección máxima contra sobrecorriente según calibre del conductor:
     - Artículo 240.4(D)(1)-(7), pág. 107, NTC 2050 segunda actualización.
 
 - Protección contra sobrecarga de los motores:
@@ -121,6 +157,7 @@ previous regulation/standard may also be given for completeness:
         - Artículo 430.32, pág. 401, NTC 2050 segunda actualización.
     - Motores de servicio intermitente:
         - Artículo 430.33, pág. 402 -> remite a Tabla 430.22(E), pág. 398, NTC 2050 segunda actualización.
+
 
 ### Capacidad de corriente de conductores
 
@@ -161,6 +198,7 @@ previous regulation/standard may also be given for completeness:
     - Tabla 8, pág. 962, NTC 2050 segunda actualización.
     - Tabla 8, pág. 728, NTC 2050 primera actualización.
 
+
 ### Canalizaciones
 
 - Dimensiones de conductores aislados (tener en cuenta la cantidad de conductores totales):
@@ -170,6 +208,7 @@ previous regulation/standard may also be given for completeness:
 - Sección transversal de tubo (conduit):
     - Tabla 4, pág. 954, NTC 2050 segunda actualización.
     - Tabla 4, pág. 720, NTC 2050 primera actualización.
+
 
 ### Factores de demanda
 
@@ -213,35 +252,18 @@ previous regulation/standard may also be given for completeness:
 - Cargas no coincidentes:
     - Artículo 220.60, pág. 80, NTC 2050 segunda actualización.
 
-### Acometidas (artículo 230, pág. 92, NTC 2050 segunda actualización)
 
-- Acometida aérea según Título 26 (d), pág. 134, libro 3, RETIE 2024:
-    - Cobre: calibre no menor a 8 AWG.
-    - Aluminio: calibre no menor a 6 AWG.
-
-- Acometida subterránea según Artículo 230.31 (B), pág. 96, NTC 2050 segunda actualización:
-    - Cobre: calibre no menor a 8 AWG.
-    - Aluminio: calibre no menor a 6 AWG.
-
-- Cálcula de acometida para cargas continuas y no continuas:
-    - Artículo 230.42(A)(1), pág. 97, NTC 2050 segunda actualización.
-
-
-##  Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2024
+##  Reglamento Técnico de Iluminación y Alumbrado Público - RETILAP 2026
 
 - Requisitos de iluminación de ambientes, áreas de trabajo, tarea visual y actividades en interiores:
-    - Tabla 3.2.2.6 a, pág. 26, libro 3, RETILAP 2024.
-    - Iluminación mínima para locales y edificios educativos:
-        - Tabla 3.2.2.6 a, pág. 40, libro 3, RETILAP 2024.
+    - Tabla 3.2.2.6 a, pág. 27, libro 3, RETILAP 2026.
+    - Iluminación mínima para locales educativos y edificios educativos:
+        - Tabla 3.2.2.6 a, pág. 41, libro 3, RETILAP 2026.
 
 - Eficiencia energética en las instalaciones de sistemas de iluminación interior (VEEI):
-    - Artículo 3.2.5, pág. 59, libro 3, RETILAP 2024.
+    - Artículo 3.2.5, pág. 62, libro 3, RETILAP 2026.
 
-- Medición y cálculo de iluminancia:
-    - pág. 49, libro 3, RETILAP 2024.
-
-- Cálculos para iluminación interior:
-    - Artículo 3.2.3, pág, 48, libro 3, RETILAP 2024.
+- Artículo 3.2.3. Cálculos para iluminación interior:
     - Superficie de cálculo de iluminancia:
-        - Artículo 3.2.3.1, pág. 48, libro 3, RETILAP 2024.
-        - Figura 3.2.3.1. a, pág. 49, libro 3, RETILAP, 2024.
+        - Artículo 3.2.3.1, pág. 50, libro 3, RETILAP 2026.
+        - Figura 3.2.3.1.a, pág. 51, libro 3, RETILAP, 2026.
